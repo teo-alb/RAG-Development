@@ -5,5 +5,7 @@ This project is designed to be expanded into a totally functional RAG system.
 ##Features
 
 - Load HTML content asynchronously from any webpage
+- Chunk the data
+- Embed the data
 - Minimal dependencies
 - Ready to expand to full working system

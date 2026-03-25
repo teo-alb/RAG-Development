@@ -1,6 +1,7 @@
 from langchain_community.document_loaders import AsyncHtmlLoader
 from langchain_community.document_transformers import Html2TextTransformer
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_huggingface import HuggingFaceEmbeddings
 
 """
 Load HTML from url and transform it into plain text
@@ -31,4 +32,14 @@ chunks = text_splitter.create_documents(
     [transformed_data[0].page_content]
 )
 
-print(len(chunks)) #number of chunks created
+print("Number of chunks is ", len(chunks)) #number of chunks created
+
+
+embed = HuggingFaceEmbeddings(
+    model_name = "sentence-transformers/all-mpnet-base-v2"
+)
+embeddings = embed.embed_documents(
+    [chunk.page_content for chunk in chunks]
+)
+
+print(embeddings)
