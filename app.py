@@ -3,6 +3,8 @@ from langchain_community.document_transformers import Html2TextTransformer
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 
+from langchain_community.vectorstores import FAISS
+from langchain_community.docstore.in_memory import InMemoryDocstore
 """
 Load HTML from url and transform it into plain text
 """
@@ -43,3 +45,14 @@ embeddings = embed.embed_documents(
 )
 
 print(embeddings)
+
+
+"""
+Create the vector database
+"""
+
+vector_store = FAISS.from_documents(
+    documents=chunks,
+    embedding=embed
+)
+print("Vectors stored:", vector_store.index.ntotal)

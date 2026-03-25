@@ -7,5 +7,6 @@ This project is designed to be expanded into a totally functional RAG system.
 - Load HTML content asynchronously from any webpage
 - Chunk the data
 - Embed the data
+- Create the vector database
 - Minimal dependencies
 - Ready to expand to full working system
