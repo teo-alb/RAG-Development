@@ -4,9 +4,7 @@ This project is designed to be expanded into a totally functional RAG system.
 
 ##Features
 
-- Load HTML content asynchronously from any webpage
-- Chunk the data
-- Embed the data
-- Create the vector database
+- Indexing Pipeline: Loading the files -> Chunking -> Embedding -> Storing in Database
+- Retrieval Section from Generation Pipeline
 - Minimal dependencies
 - Ready to expand to full working system
