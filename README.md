@@ -5,6 +5,6 @@ This project is designed to be expanded into a totally functional RAG system.
 ##Features
 
 - Indexing Pipeline: Loading the files -> Chunking -> Embedding -> Storing in Database
-- Retrieval Section from Generation Pipeline
+- Generation Pipeline: Retrieval -> Augmentation -> Generation (RAG)
 - Minimal dependencies
 - Ready to expand to full working system

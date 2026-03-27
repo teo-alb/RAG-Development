@@ -1,2 +1,5 @@
 .venv
 faiss_index/
+__pycache__
+Llama-3.3-8B-Instruct.Q8_0.gguf
+models/
