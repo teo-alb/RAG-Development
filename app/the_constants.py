@@ -1,0 +1,6 @@
+MODEL_PATH = r"models/Llama-3.3-8B-Instruct.Q4_K_M.gguf"
+TEMPERATURE = 0.0
+TOKENS = 20
+CONTEXT_TOKENS = 1024
+THREADS = 4
+STOP_S = ["\n"]
